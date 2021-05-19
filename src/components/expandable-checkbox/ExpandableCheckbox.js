@@ -1,4 +1,5 @@
 import '@components/checkbox/checkbox';
+import { boundMethod } from 'autobind-decorator';
 import './expandable-checkbox.scss';
 
 class ExpandableCheckbox {
@@ -14,10 +15,11 @@ class ExpandableCheckbox {
   }
 
   openList() {
-    this.container.addEventListener('click', this.bindThis.bind(this));
+    this.container.addEventListener('click', this.onClick);
   }
 
-  bindThis() {
+  @boundMethod
+  onClick() {
     this.items.classList.toggle('expandable-checkbox__items_hidden');
     this.arrow.classList.toggle('expandable-checkbox__arrow_opened');
   }

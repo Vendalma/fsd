@@ -1,4 +1,5 @@
 import '@components/button/button';
+import { boundMethod } from 'autobind-decorator';
 import './dropdown.scss';
 
 class Dropdown {
@@ -17,17 +18,24 @@ class Dropdown {
     this.input = this.container.querySelector('.js-dropdown__input');
     this.selectList = this.container.querySelector('.js-dropdown__select-list');
     this.icon = this.container.querySelector('.js-dropdown__icon');
-    this.countContainer = this.container.querySelectorAll('.js-dropdown__count');
+    this.countContainer = this.container.querySelectorAll(
+      '.js-dropdown__count',
+    );
     if (this.checkTypeDropdown()) {
-      this.clearButton = this.container.querySelector('.js-dropdown__button_type_clear');
-      this.applyButton = this.container.querySelector('.js-dropdown__button_type_apply');
+      this.clearButton = this.container.querySelector(
+        '.js-dropdown__button_type_clear',
+      );
+      this.applyButton = this.container.querySelector(
+        '.js-dropdown__button_type_apply',
+      );
     }
   }
 
   clickOnInput() {
-    this.input.addEventListener('click', this.openContainer.bind(this));
+    this.input.addEventListener('click', this.openContainer);
   }
 
+  @boundMethod
   openContainer() {
     this.selectList.classList.toggle('dropdown__select-list_closed');
     this.selectList.classList.toggle('dropdown__select-list_opened');
@@ -80,16 +88,19 @@ class Dropdown {
 
   countContainerListener() {
     this.countContainer.forEach((item) => {
-      item.addEventListener('click', this.onCountContainerClick.bind(this));
+      item.addEventListener('click', this.onCountContainerClick);
     });
   }
 
+  @boundMethod
   onCountContainerClick(event) {
     let score;
     const { id } = event.target.parentElement.dataset;
     if (event.target.classList.contains('js-dropdown__button_type_plus')) {
       score = this.onPlusClick(event.target);
-    } else if (event.target.classList.contains('js-dropdown__button_type_min')) {
+    } else if (
+      event.target.classList.contains('js-dropdown__button_type_min')
+    ) {
       score = this.onMinClick(event.target);
     }
     this.changeCounterProp(id, score);
@@ -142,7 +153,10 @@ class Dropdown {
 
   checkCountProp() {
     return (
-      Object.values(this.data).reduce((acc, currentValue) => acc + currentValue.score, 0) === 0
+      Object.values(this.data).reduce(
+        (acc, currentValue) => acc + currentValue.score,
+        0,
+      ) === 0
     );
   }
 
@@ -156,10 +170,11 @@ class Dropdown {
 
   clickClearButton() {
     if (this.checkTypeDropdown()) {
-      this.clearButton.addEventListener('click', this.onClickClearButton.bind(this));
+      this.clearButton.addEventListener('click', this.onClickClearButton);
     }
   }
 
+  @boundMethod
   onClickClearButton() {
     Object.keys(this.data).forEach((key) => {
       this.changeCounterProp(key, 0);
@@ -171,7 +186,7 @@ class Dropdown {
 
   clickApplyButton() {
     if (this.checkTypeDropdown()) {
-      this.applyButton.addEventListener('click', this.openContainer.bind(this));
+      this.applyButton.addEventListener('click', this.openContainer);
     }
   }
 

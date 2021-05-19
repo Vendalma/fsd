@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import './like-button.scss';
 
 class LikeButton {
@@ -12,9 +13,10 @@ class LikeButton {
   }
 
   changeCount() {
-    this.container.addEventListener('click', this.onContainerClick.bind(this));
+    this.container.addEventListener('click', this.onContainerClick);
   }
 
+  @boundMethod
   onContainerClick() {
     if (this.container.classList.contains('like-button_active')) {
       this.container.classList.remove('like-button_active');

@@ -1,6 +1,7 @@
 import '@components/button/button';
 import '@components/link/link';
 import '@components/logo/logo';
+import { boundMethod } from 'autobind-decorator';
 import './header.scss';
 
 class Header {
@@ -11,15 +12,22 @@ class Header {
   }
 
   init() {
-    this.navBar = this.container.parentElement.querySelector('.js-header__nav-bar');
-    this.iconMenu = this.container.querySelector('.js-header__menu-icon_opened');
-    this.iconClose = this.container.querySelector('.js-header__menu-icon_closed');
+    this.navBar = this.container.parentElement.querySelector(
+      '.js-header__nav-bar',
+    );
+    this.iconMenu = this.container.querySelector(
+      '.js-header__menu-icon_opened',
+    );
+    this.iconClose = this.container.querySelector(
+      '.js-header__menu-icon_closed',
+    );
   }
 
   clickContainer() {
-    this.container.addEventListener('click', this.onContainerClick.bind(this));
+    this.container.addEventListener('click', this.onContainerClick);
   }
 
+  @boundMethod
   onContainerClick() {
     this.navBar.classList.toggle('header__nav-bar_open');
     this.iconMenu.classList.toggle('header__menu-icon_hidden');
