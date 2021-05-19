@@ -1,5 +1,7 @@
 module.exports = {
-  pugClosingBracketPosition: "last-line",
+  pugClosingBracketPosition: 'last-line',
 
   pugWrapAttributesThreshold: 1,
+
+  singleQuote: true,
 };
