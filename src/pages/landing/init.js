@@ -6,4 +6,4 @@ const images = [
   'url("../../assets/images/bg-image-2.jpg")',
   'url("../../assets/images/bg-image-3.jpg")',
 ];
-const bgSlider = new BgSlider(sliderWrapper, images);
+new BgSlider(sliderWrapper, images);

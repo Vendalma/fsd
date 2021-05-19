@@ -72,7 +72,7 @@ class DonutChart {
   }
 
   initDiagram() {
-    const chart = new Chart(this.container, {
+    new Chart(this.container, {
       type: 'doughnut',
       data: {
         labels: this.getOptions('text'),
