@@ -1,6 +1,6 @@
 mixin link(options={})
   - const { type, text, isWithArrow = false } = options;
 
-  a.link(href="/mock-address/change-me", class=type === 'active' ? 'link_active' : '') #{text}
+  a.link(href="/mock-address/change-me", class=type === 'active' && 'link_active') #{text}
     if isWithArrow
       i.link__icon expand_more

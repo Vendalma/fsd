@@ -6,9 +6,9 @@ mixin expandable-checkbox(options={})
   .expandable-checkbox.js-expandable-checkbox
     .expandable-checkbox__name #{text}
       i.expandable-checkbox__arrow.js-expandable-checkbox__arrow(
-        class=isOpened ? 'expandable-checkbox__arrow_opened' : '') expand_more
+        class=isOpened && 'expandable-checkbox__arrow_opened') expand_more
     ul.expandable-checkbox__items.js-expandable-checkbox__items(
-      class=!isOpened ? 'expandable-checkbox__items_hidden' : '')
+      class=!isOpened && 'expandable-checkbox__items_hidden')
       each item in items
         li.expandable-checkbox__item
           +checkbox(item)

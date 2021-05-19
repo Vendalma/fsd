@@ -17,7 +17,7 @@ mixin text-field(options)
       types[type],
     ];
 
-    const blockTheme = theme === "subscribe" ? "text-field_theme_subscribe" : "";
+    const blockTheme = theme === "subscribe" && "text-field_theme_subscribe";
 
 
   .text-field(class = blockTheme)
@@ -26,8 +26,8 @@ mixin text-field(options)
         type=`${type}`,
         placeholder=placeholder,
         class=classes,
-        class=isWithMask ? 'text-field__input_masked js-text-field__input_masked' : '',
-        class=isActive ? 'text-field__input_active' : '')
+        class=isWithMask && 'text-field__input_masked js-text-field__input_masked',
+        class=isActive && 'text-field__input_active')
     if theme === "subscribe"
       button(type="submit" name="subscribe" value="submit").text-field__button arrow_forward
 

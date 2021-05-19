@@ -1,5 +1,5 @@
 mixin like-button(options)
   - const { count = 1, active = false } = options;
 
-  button.like-button.js-like-button(class=active ? 'like-button_active' : '')
+  button.like-button.js-like-button(class=active && 'like-button_active')
     span.like-button__count.js-like-button__count #{count}

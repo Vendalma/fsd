@@ -15,7 +15,7 @@ mixin checkbox(options = {})
     };
 
   .checkbox
-    label.checkbox__label(class=isTypeRich ? 'checkbox__label_type_rich' : '') 
+    label.checkbox__label(class=isTypeRich && 'checkbox__label_type_rich') 
       input.checkbox__input(
         type="checkbox",
         checked=checked,
@@ -25,4 +25,4 @@ mixin checkbox(options = {})
         span.checkbox__header #{header}
       span.checkbox__text(
         class=textWidthTypes[textWidth],
-        class=isTypeRich ? 'checkbox__text_type_rich' : '') #{text}
+        class=isTypeRich && 'checkbox__text_type_rich') #{text}
