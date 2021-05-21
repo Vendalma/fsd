@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import './like-button.scss';
 
 class LikeButton {

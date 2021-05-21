@@ -1,7 +1,9 @@
+import { boundMethod } from 'autobind-decorator';
+
 import '@components/button/button';
 import '@components/link/link';
 import '@components/logo/logo';
-import { boundMethod } from 'autobind-decorator';
+
 import './header.scss';
 
 class Header {
