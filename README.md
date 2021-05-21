@@ -24,19 +24,21 @@
 
 https://github.com/Vendalma/fsd_2step.git
 
-## NPM
+## Инициализация проекта
 
-`npm install` - инициализация проекта
+1. Установить необходимые зависимости - `npm install`
 
-`npm run build-dev` - development build
+2. Запустить сборку проекта в режиме разработки - `npm run dev`
 
-`npm run build-prod` - production build
+3. Запустить локальный сервер - `npm run start`
 
-`npm run start` - запуск dev-server
+4. Сборка релизной версии - `npm run prod`
 
-`npm run lint` - запуск линтера
+5. Деплой на GitHub Pages - `npm run deploy`
 
-`npm run deploy` - загрузка проекта на GitHub Pages
+---
+
+Команда `npm run lint` запускает проверку кода с помощью ESlint
 
 ## jQuery плагины
 
@@ -51,3 +53,7 @@ https://github.com/Vendalma/fsd_2step.git
 [simple pagination](https://github.com/flaviusmatis/simplePagination.js)
 
 [chart.js](https://github.com/chartjs/Chart.js)
+
+## Глобальные библиотеки
+
+- Node.js 14.x
