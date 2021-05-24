@@ -10,4 +10,5 @@ import '@components/pagination/init';
 import '@components/range-slider/init';
 import '@components/room-card/init';
 import '@components/simple-footer/simple-footer';
+
 import './search-room.scss';

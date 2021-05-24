@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "prod": "webpack --mode production --config ./webpack/webpack.prod.config.js",
+    "build": "webpack --mode production --config ./webpack/webpack.prod.config.js",
     "dev": "webpack --mode development  --config ./webpack/webpack.dev.config.js",
     "start": "webpack-dev-server --open  --watch --config ./webpack/webpack.dev.config.js",
     "lint": "eslint . --fix --ext .js",

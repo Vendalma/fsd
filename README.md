@@ -24,7 +24,7 @@
 
 https://github.com/Vendalma/fsd_2step.git
 
-## Инициализация проекта
+## Инициализация проекта(совместимо с Node.js 14.x)
 
 1. Установить необходимые зависимости - `npm install`
 
@@ -32,7 +32,7 @@ https://github.com/Vendalma/fsd_2step.git
 
 3. Запустить локальный сервер - `npm run start`
 
-4. Сборка релизной версии - `npm run prod`
+4. Сборка релизной версии - `npm run build`
 
 5. Деплой на GitHub Pages - `npm run deploy`
 
@@ -53,7 +53,3 @@ https://github.com/Vendalma/fsd_2step.git
 [simple pagination](https://github.com/flaviusmatis/simplePagination.js)
 
 [chart.js](https://github.com/chartjs/Chart.js)
-
-## Глобальные библиотеки
-
-- Node.js 14.x
