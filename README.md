@@ -1,6 +1,6 @@
 # fsd_2step
 
-Тестовое задание для компании Fullstack Development
+Тестовое задание для компании MetaLamp
 
 [Colors-types](https://vendalma.github.io/fsd_2step/pages/colors-types/colors-types.html)
 
