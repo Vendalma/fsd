@@ -4,7 +4,7 @@ mixin expandable-checkbox(options={})
   - const { text, items, isOpened = false } = options;
 
   .expandable-checkbox.js-expandable-checkbox
-    .expandable-checkbox__name #{text}
+    .expandable-checkbox__name.js-expandable-checkbox__name #{text}
       i.expandable-checkbox__arrow.js-expandable-checkbox__arrow(
         class=isOpened && 'expandable-checkbox__arrow_opened') expand_more
     ul.expandable-checkbox__items.js-expandable-checkbox__items(

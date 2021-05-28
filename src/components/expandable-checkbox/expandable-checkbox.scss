@@ -1,9 +1,10 @@
 .expandable-checkbox {
   width: 100%;
   position: relative;
-  cursor: pointer;
+  
 
   &__name {
+    cursor: pointer;
     font-family: $sans-serif-font;
     font-style: normal;
     font-weight: bold;

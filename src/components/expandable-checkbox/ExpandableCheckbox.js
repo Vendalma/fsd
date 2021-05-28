@@ -13,11 +13,12 @@ class ExpandableCheckbox {
 
   init() {
     this.items = this.container.querySelector('.js-expandable-checkbox__items');
+    this.name = this.container.querySelector('.js-expandable-checkbox__name');
     this.arrow = this.container.querySelector('.js-expandable-checkbox__arrow');
   }
 
   openList() {
-    this.container.addEventListener('click', this.onClick);
+    this.name.addEventListener('click', this.onClick);
   }
 
   @boundMethod
