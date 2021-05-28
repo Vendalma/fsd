@@ -3,7 +3,6 @@ include ../button/button
 mixin dropdown(options={})
   -
     const {type,
-    isActive= false,
     items = [],
     scores= {}
     } = options;
@@ -27,12 +26,9 @@ mixin dropdown(options={})
       input.dropdown__input.js-dropdown__input(
         type="text",
         readonly,
-        placeholder=`${placeholderVariables[type]}`,
-        class=isActive ? 'dropdown__input_opened' : 'dropdown__input_closed')
-      i.dropdown__icon.js-dropdown__icon(
-        class=isActive ? 'dropdown__icon_opened' : 'dropdown__icon_closed') expand_more
+        placeholder=`${placeholderVariables[type]}`)
+      i.dropdown__icon.js-dropdown__icon expand_more
     ul.dropdown__select-list.js-dropdown__select-list(
-      class=isActive ? 'dropdown__select-list_opened' : 'dropdown__select-list_closed',
       class=`dropdown__select-list_type_${type}`)
       each item in items
         li.dropdown__item

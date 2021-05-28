@@ -9,9 +9,8 @@ class Dropdown {
     this.container = container;
     this.data = {};
     this.init();
-    this.clickOnInput();
+    this.clickOnDocument();
     this.clickClearButton();
-    this.clickApplyButton();
     this.checkItemScore();
     this.countContainerListener();
   }
@@ -33,20 +32,23 @@ class Dropdown {
     }
   }
 
-  clickOnInput() {
-    this.input.addEventListener('click', this.openContainer);
+  clickOnDocument() {
+    window.addEventListener('click', this.openContainer);
   }
 
   @boundMethod
-  openContainer() {
-    this.selectList.classList.toggle('dropdown__select-list_closed');
-    this.selectList.classList.toggle('dropdown__select-list_opened');
-
-    this.input.classList.toggle('dropdown__input_closed');
-    this.input.classList.toggle('dropdown__input_opened');
-
-    this.icon.classList.toggle('dropdown__icon_closed');
-    this.icon.classList.toggle('dropdown__icon_opened');
+  openContainer(e) {
+    const { target } = e;
+    const isClickOnActiveElem = target === this.input || target.parentElement === this.applyButton;
+    if (isClickOnActiveElem) {
+      this.selectList.classList.toggle('dropdown__select-list_opened');
+      this.input.classList.toggle('dropdown__input_opened');
+      this.icon.classList.toggle('dropdown__icon_opened');
+    } else if (!isClickOnActiveElem && !this.selectList.contains(target)) {
+      this.selectList.classList.remove('dropdown__select-list_opened');
+      this.input.classList.remove('dropdown__input_opened');
+      this.icon.classList.remove('dropdown__icon_opened');
+    }
   }
 
   onMinClick(elem) {
@@ -184,12 +186,6 @@ class Dropdown {
     this.setScoresRow();
     this.hideClearButton();
     this.renderStr();
-  }
-
-  clickApplyButton() {
-    if (this.checkTypeDropdown()) {
-      this.applyButton.addEventListener('click', this.openContainer);
-    }
   }
 
   checkItemScore() {

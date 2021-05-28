@@ -29,7 +29,7 @@
         "младенцы"
       ]
     },
-    "room": {
+    "roomFirst": {
       "type": "room",
       "items": [
         "спальни",
@@ -41,9 +41,8 @@
         "кровати": 2
       }
     },
-    "roomActive": {
+    "roomSecond": {
       "type": "room",
-      "isActive": true,
       "items": [
         "спальни",
         "кровати",
@@ -55,7 +54,6 @@
       }
     },
     "guestsTwo": {
-      "isActive": true,
       "type": "guests",
       "items": [
         "взрослые",
@@ -64,7 +62,6 @@
       ]
     },
     "guestsThree": {
-      "isActive": true,
       "type": "guests",
       "items": [
         "взрослые",

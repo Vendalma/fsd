@@ -22,7 +22,7 @@ block head
 block content
   -
     const {settingsTextField:{text, hover, mask, subscribe},
-      settingsDropdown: {guestsOne, room, roomActive, guestsTwo, guestsThree},
+      settingsDropdown: {guestsOne, roomFirst, roomSecond, guestsTwo, guestsThree},
       checkboxSettings:{smoking, pets, guests},
       radioSettings:{male, female}, 
       buttonSettings:{filled, filledDisabled, bordered, borderedDisabled, defaultButton, defaultWithColor, filledTypeSubmit},
@@ -158,13 +158,13 @@ block content
             .form-elements__description
               +description({ isWithStatus: true, text: "dropdown", status: "default" })
             .form-elements__dropdown
-              +dropdown(room)
+              +dropdown(roomFirst)
 
           .form-elements__dropdown-container.form-elements__dropdown-container_size_s
             .form-elements__description
               +description({ isWithStatus: true, text: "dropdown", status: "expanded" })
             .form-elements__dropdown
-              +dropdown(roomActive)
+              +dropdown(roomSecond)
 
           .form-elements__expandable-checkbox-container
             .form-elements__expandable-checkbox
