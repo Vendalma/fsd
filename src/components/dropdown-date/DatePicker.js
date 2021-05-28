@@ -41,7 +41,7 @@ class DatePicker {
       }),
     );
     this.addButtons();
-    this.setDate();
+    this.setDate('old');
   }
 
   filter() {
@@ -50,6 +50,7 @@ class DatePicker {
     );
     this.picker = $(filterInput).datepicker(
       Object.assign(this.settings(), {
+        minDate: new Date(),
         dateFormat: 'dd M',
         onSelect(fd) {
           $(filterInput).val(fd.toLowerCase());
@@ -67,7 +68,7 @@ class DatePicker {
       }),
     );
     this.addButtons();
-    this.setDate();
+    this.setDate('current');
   }
 
   range() {
@@ -80,6 +81,7 @@ class DatePicker {
     const wrapper = this.container.querySelector('.js-dropdown-date__wrapper');
     this.picker = $(start).datepicker(
       Object.assign(this.settings(), {
+        minDate: new Date(),
         onSelect(fd) {
           $(start).val(fd.split('-')[0]);
           $(end).val(fd.split('-')[1]);
@@ -96,7 +98,7 @@ class DatePicker {
     $(end).on('click', this.showDatepicker);
     this.addButtons();
     if (this.picker.hasClass('dropdown-date__input_with-set-date')) {
-      this.setDate();
+      this.setDate('current');
     }
   }
 
@@ -140,10 +142,27 @@ class DatePicker {
     this.picker.data('datepicker').hide();
   }
 
-  setDate() {
-    this.picker
-      .data('datepicker')
-      .selectDate([new Date('2019-08-19'), new Date('2019-08-23')]);
+  setDate(type) {
+    if (type === 'old') {
+      this.picker
+        .data('datepicker')
+        .selectDate([new Date('2019-08-19'), new Date('2019-08-23')]);
+    } else if (type === 'current') {
+      const currentYear = this.checkDate();
+      this.picker
+        .data('datepicker')
+        .selectDate([
+          new Date(`${currentYear}-08-19`),
+          new Date(`${currentYear}-08-23`),
+        ]);
+    }
+  }
+
+  checkDate() {
+    const now = new Date();
+    const otherDay = new Date(`${now.getFullYear()} / 08 / 19`);
+
+    return now < otherDay ? now.getFullYear() : now.getFullYear() + 1;
   }
 }
 export default DatePicker;

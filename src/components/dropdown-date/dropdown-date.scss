@@ -135,6 +135,7 @@
 
 .datepicker--cell.-other-month-.-in-range- {
   color: $dark-50;
+  background-color: rgba(188, 156, 255, 0.2);
 }
 
 .datepicker--cell.-other-month-.-focus- {
@@ -143,8 +144,12 @@
 }
 
 .datepicker--cell.-range-from- {
+  background: $primary-gradient;
+  border-radius: 22px;
+  font-weight: bold;
+  color: #fff;
   position: relative;
-  color: #ffffff;
+  border: none;
 
   &::after {
     content: '';
@@ -257,6 +262,48 @@
 
 .datepicker--cell-year.-focus- {
   border-radius: 4px;
+}
+
+.datepicker--cell.-disabled- {
+  color: $dark-10;
+  &::after {
+    content: '';
+    display: none;
+  }
+}
+
+.datepicker--cell.-disabled-.-focus- {
+  background: #ffffff;
+  color: $dark-10;
+  font-weight: 400;
+  &::after {
+    content: '';
+    display: none;
+  }
+}
+
+.datepicker--cell.-disabled-.-in-range- {
+  background: #ffffff;
+  color: $dark-10;
+}
+
+.datepicker--cell.-disabled-.-range-from- {
+  background: #ffffff;
+  border: none;
+  color: $dark-10;
+}
+
+.datepicker--cell.-disabled-.-other-month-.-focus- {
+  background: #ffffff;
+  color: $dark-10;
+  font-weight: 400;
+  border: none;
+}
+
+.datepicker--cell.-disabled-.-range-from-.-focus- {
+  background: #ffffff;
+  color: $dark-10;
+  border: none;
 }
 
 .datepickers-container {
@@ -385,7 +432,7 @@
       }
     }
   }
-  
+
   .datepicker--cell {
     padding: 3.9% 0px;
   }
