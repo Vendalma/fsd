@@ -1,11 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
 
-import '@components/button/button';
-import '@components/link/link';
-import '@components/logo/logo';
-
-import './header.scss';
-
 class Header {
   constructor(container) {
     this.container = container;

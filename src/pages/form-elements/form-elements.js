@@ -1,20 +1,10 @@
 import '@/main';
-import '@components/bonus-icon/bonus-icon';
-import '@components/bullet-list/bullet-list';
-import '@components/button/button';
-import '@components/checkbox/checkbox';
-import '@components/comment/comment';
-import '@components/description/description';
-import '@components/dropdown-date/init';
 import '@components/dropdown/init';
+import '@components/dropdown-date/init';
 import '@components/expandable-checkbox/init';
 import '@components/like-button/init';
-import '@components/logo/logo';
 import '@components/pagination/init';
-import '@components/radio/radio';
 import '@components/range-slider/init';
-import '@components/rate-button/rate-button';
 import '@components/text-field/init';
-import '@components/toggle/toggle';
 
 import './form-elements.scss';

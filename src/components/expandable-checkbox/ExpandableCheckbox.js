@@ -1,9 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
 
-import '@components/checkbox/checkbox';
-
-import './expandable-checkbox.scss';
-
 class ExpandableCheckbox {
   constructor(container) {
     this.container = container;

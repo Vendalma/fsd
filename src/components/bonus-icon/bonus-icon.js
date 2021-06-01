@@ -1,1 +1,0 @@
-import './bonus-icon.scss';

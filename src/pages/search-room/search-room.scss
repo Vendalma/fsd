@@ -1,3 +1,15 @@
+@import '@components/checkbox/checkbox';
+@import '@components/description/description';
+@import '@components/dropdown/dropdown';
+@import '@components/dropdown-date/dropdown-date';
+@import '@components/expandable-checkbox/expandable-checkbox';
+@import '@components/footer/footer';
+@import '@components/header/header';
+@import '@components/pagination/pagination';
+@import '@components/range-slider/range-slider';
+@import '@components/room-card/room-card';
+@import '@components/simple-footer/simple-footer';
+
 .search-room {
   background-color: #ffffff;
   width: 100%;

@@ -1,3 +1,8 @@
+@import '@components/footer/footer';
+@import '@components/header/header';
+@import '@components/sign-in-card/sign-in-card';
+@import '@components/simple-footer/simple-footer';
+
 .sign-in {
   display: flex;
   flex-direction: column;

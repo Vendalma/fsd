@@ -1,9 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
 
-import '@components/button/button';
-
-import './dropdown.scss';
-
 class Dropdown {
   constructor(container) {
     this.container = container;

@@ -1,7 +1,5 @@
 import Chart from 'chart.js';
 
-import './donut-chart.scss';
-
 class DonutChart {
   constructor(container, options) {
     this.container = container;

@@ -1,3 +1,7 @@
+@import 'lightslider/dist/css/lightslider.min';
+
+@import '@components/rate-button/rate-button';
+
 .room-card {
   max-width: 270px;
   background-color: #ffffff;
@@ -194,7 +198,7 @@ a > .material-icons {
 
 .lSAction > .lSNext {
   right: 0px;
-  
+
   & > i {
     transform: rotate(-90deg);
   }

@@ -1,1 +1,0 @@
-import './text-types.scss';

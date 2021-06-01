@@ -1,3 +1,7 @@
+@import '@components/button/button';
+@import '@components/link/link';
+@import '@components/logo/logo';
+
 .header {
   width: 100%;
   display: flex;
@@ -113,7 +117,7 @@
       &_m {
         min-width: 197px;
       }
-      
+
       &_s {
         min-width: 87px;
       }

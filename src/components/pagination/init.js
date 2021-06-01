@@ -1,4 +1,4 @@
-import './pagination';
+import '@/library/simple pagination/jquery.simplePagination';
 
 $('.js-pagination__block').pagination({
   itemsOnPage: 12,

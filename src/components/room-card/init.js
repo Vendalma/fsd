@@ -1,4 +1,4 @@
-import './room-card';
+import 'lightslider';
 
 const roomSlider = document.querySelectorAll('.js-room-card__slider');
 roomSlider.forEach((elem) => {

@@ -1,8 +1,5 @@
 import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.min.css';
 import { boundMethod } from 'autobind-decorator';
-
-import './dropdown-date.scss';
 
 class DatePicker {
   constructor(container) {

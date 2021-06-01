@@ -1,7 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
 
-import './like-button.scss';
-
 class LikeButton {
   constructor(container) {
     this.container = container;

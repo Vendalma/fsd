@@ -1,3 +1,8 @@
+@import '@components/button/button';
+@import '@components/description/description';
+@import '@components/dropdown/dropdown';
+@import '@components/dropdown-date/dropdown-date';
+
 .calc-card {
   max-width: 380px;
   background: #ffffff;

@@ -1,4 +1,4 @@
-import './range-slider';
+import 'ion-rangeslider';
 
 $('.js-range-slider__input').ionRangeSlider({
   keyboard: false,

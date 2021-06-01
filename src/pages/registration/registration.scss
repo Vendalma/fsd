@@ -1,3 +1,8 @@
+@import '@components/footer/footer';
+@import '@components/header/header';
+@import '@components/registration-card/registration-card';
+@import '@components/simple-footer/simple-footer';
+
 .registration {
   display: flex;
   flex-direction: column;
