@@ -22,8 +22,8 @@
 
       &_size {
         &_large {
-          width: 68%;
           display: flex;
+          width: 68%;
         }
       }
     }
@@ -42,15 +42,15 @@
   }
 
   &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
     padding-right: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    position: relative;
+    padding-left: 20px;
     font-family: $sans-serif-font;
     font-style: normal;
   }
@@ -60,9 +60,9 @@
     flex-direction: column;
     width: 100%;
     max-width: 712px;
+    margin-right: 54px;
     padding-top: 70px;
     padding-bottom: 63px;
-    margin-right: 54px;
 
     & > :first-child {
       margin-bottom: 15px;
@@ -113,27 +113,27 @@
   }
 
   &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $dark-100;
     font-weight: bold;
     font-size: 1.357rem;
     line-height: 1.643rem;
-    color: $dark-100;
-    margin-bottom: 20px;
-    margin-top: 0px;
   }
 
   &__text {
+    margin: 0;
+    color: $dark-75;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.714rem;
-    color: $dark-75;
-    margin: 0px;
 
     &_theme {
       &_small-font {
-        line-height: 16px;
-        color: $dark-50;
         padding-top: 7px;
         padding-left: 2px;
+        color: $dark-50;
+        line-height: 16px;
       }
     }
   }
@@ -154,9 +154,9 @@
 
   &__sidebar {
     position: relative;
+    min-width: 380px;
     margin-top: 70px;
     margin-bottom: 70px;
-    min-width: 380px;
   }
 
   &__card {
@@ -166,8 +166,8 @@
   }
 
   &__line {
-    border-top: 1px solid $dark-25;
     width: 100%;
+    border-top: 1px solid $dark-25;
   }
 
   &__footer {
@@ -205,8 +205,8 @@
     }
 
     &__column {
-      margin-left: 10px;
       margin-right: 10px;
+      margin-left: 10px;
     }
   }
 }
@@ -215,8 +215,8 @@
   .room-details {
     &__row {
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     &__donut-chart-container {
@@ -262,8 +262,8 @@
     }
 
     &__sidebar {
-      margin-top: 0px;
       min-width: inherit;
+      margin-top: 0;
     }
 
     &__footer {
@@ -279,8 +279,8 @@
 @media (max-width: $xs) {
   .room-details {
     &__wrapper {
-      padding-left: 10px;
       padding-right: 10px;
+      padding-left: 10px;
     }
   }
 }

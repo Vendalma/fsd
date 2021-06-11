@@ -4,14 +4,14 @@
   &__items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin: 0px;
-    padding: 0px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 
     & > :nth-child(2) {
-      margin-left: 20px;
       margin-right: 20px;
+      margin-left: 20px;
     }
   }
 
@@ -22,15 +22,15 @@
   &__icon {
     min-width: 24px;
     min-height: 24px;
-    font-family: 'Font Awesome 5 Brands';
-    background: $primary-gradient;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: normal;
     font-weight: 400;
     font-size: 1.714rem;
+    font-family: 'Font Awesome 5 Brands', sans-serif;
+    font-style: normal;
     text-align: center;
+    background: $primary-gradient;
+    background-clip: text;
     transition: all 0.2s ease-in-out;
+    -webkit-text-fill-color: transparent;
 
     &:hover {
       transform: scale(1.2);

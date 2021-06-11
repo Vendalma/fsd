@@ -4,35 +4,35 @@
 
 .room-card {
   max-width: 270px;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 20px $dark-05;
+  background-color: #fff;
   border-radius: 4px;
+  box-shadow: 0 10px 20px $dark-05;
 
   &__container {
-    background-color: #ffffff;
-    border-radius: 4px;
     padding: 20px 17px 15px 20px;
     font-family: $sans-serif-font;
     font-style: normal;
+    background-color: #fff;
+    border-radius: 4px;
   }
 
   &__block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__room {
     &-info {
-      margin: 0px;
+      margin: 0;
     }
 
     &-number {
+      color: $dark-100;
       font-weight: bold;
       font-size: 1.357rem;
       line-height: 1.643rem;
-      color: $dark-100;
 
       &_size {
         &_small {
@@ -43,30 +43,30 @@
     }
 
     &-lux {
+      color: $color-one;
       font-weight: bold;
       font-size: 0.857rem;
       line-height: 1.071rem;
       text-transform: uppercase;
-      color: $color-one;
     }
   }
 
   &__price {
     align-self: flex-end;
     height: 100%;
-    margin: 0px;
+    margin: 0;
 
     &-text {
+      padding-left: 1px;
+      color: $dark-50;
+      font-weight: 700;
       font-size: 1rem;
       line-height: 1.286rem;
-      font-weight: 700;
-      color: $dark-50;
-      padding-left: 1px;
 
       &_size {
         &_small {
-          font-size: 0.857rem;
           font-weight: 400;
+          font-size: 0.857rem;
         }
       }
     }
@@ -74,21 +74,21 @@
 
   &__line {
     width: 100%;
-    border-top: 1px solid $dark-10;
     margin-top: 12px;
     margin-bottom: 11px;
+    border-top: 1px solid $dark-10;
   }
 
   &__reviews {
-    margin: 0px;
-    padding-bottom: 5px;
+    margin: 0;
     padding-right: 3px;
+    padding-bottom: 5px;
 
     &-text {
+      color: $dark-50;
+      font-weight: 700;
       font-size: 1rem;
       line-height: 1.125rem;
-      font-weight: 700;
-      color: $dark-50;
 
       &_size {
         &_narrow {
@@ -102,23 +102,23 @@
 .lSSlideOuter {
   position: relative;
   max-width: 270px;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0 0;
 }
 
 .lSSlideOuter .lSPager.lSpg {
-  margin-right: 14px;
-  margin-bottom: 12px;
-  padding: 0;
   position: absolute;
   right: 0;
   bottom: 0;
+  margin-right: 14px;
+  margin-bottom: 12px;
+  padding: 0;
 }
 
 .lSSlideOuter .lSPager.lSpg > li {
-  cursor: pointer;
   display: inline-block;
   margin-right: 3.75px;
-  padding: 0px;
+  padding: 0;
+  cursor: pointer;
 
   &:last-of-type {
     margin-right: 0;
@@ -126,25 +126,25 @@
 }
 
 .lSSlideOuter .lSPager.lSpg > li a {
-  border: 1px solid #fff;
   background-color: transparent;
+  border: 1px solid #fff;
 }
 
 .lSSlideOuter .lSPager.lSpg > li:hover a,
 .lSSlideOuter .lSPager.lSpg > li.active a {
   background-color: #fff;
-  box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+  box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
 }
 
 a > .material-icons {
-  font-family: $material-icon-font;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: none;
-  font-size: 1.714rem;
-  line-height: 1.714rem;
-  opacity: 0;
   color: #fff;
+  font-weight: normal;
+  font-size: 1.714rem;
+  font-family: $material-icon-font;
+  font-style: normal;
+  line-height: 1.714rem;
+  text-transform: none;
+  opacity: 0;
 }
 
 .lSSlideOuter:hover .lSPrev {
@@ -174,22 +174,22 @@ a > .material-icons {
 }
 
 .lSAction > a {
-  width: 42px;
-  height: 151px;
+  position: absolute;
+  top: 0;
+  z-index: 99;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 151px;
+  margin-top: 0;
   background-image: none;
   cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  margin-top: 0px;
 }
 
 .lSAction > .lSPrev {
-  left: 0px;
+  left: 0;
 
   & > i {
     transform: rotate(90deg);
@@ -197,7 +197,7 @@ a > .material-icons {
 }
 
 .lSAction > .lSNext {
-  right: 0px;
+  right: 0;
 
   & > i {
     transform: rotate(-90deg);

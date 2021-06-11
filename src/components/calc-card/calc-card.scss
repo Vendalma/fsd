@@ -4,14 +4,14 @@
 @import '@components/dropdown-date/dropdown-date';
 
 .calc-card {
-  max-width: 380px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
+  max-width: 380px;
   padding: 39px 21px 29px 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 
   &__wrapper {
     margin-right: 8px;
@@ -23,21 +23,21 @@
   &__room-info {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: baseline;
-    margin-top: 0px;
-    margin-bottom: 22px;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 22px;
   }
 
   &__number {
+    color: $dark-100;
     font-weight: bold;
     font-size: 1.714rem;
     line-height: 2.071rem;
-    color: $dark-100;
 
     &-info {
-      margin: 0px;
+      margin: 0;
     }
 
     &_size {
@@ -48,28 +48,28 @@
     }
 
     &-lux {
+      color: $color-one;
       font-weight: bold;
       font-size: 0.857rem;
       line-height: 1.071rem;
       text-transform: uppercase;
-      color: $color-one;
     }
   }
 
   &__price {
-    line-height: 1.286rem;
+    color: $dark-50;
     font-weight: 700;
     font-size: 1rem;
-    color: $dark-50;
+    line-height: 1.286rem;
 
     &-info {
-      margin: 0px;
+      margin: 0;
     }
 
     &_size {
       &_small {
-        font-size: 0.857rem;
         font-weight: 400;
+        font-size: 0.857rem;
       }
     }
   }
@@ -87,8 +87,8 @@
   }
 
   &__calculating-items {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     & > :nth-of-type(2) {
       margin-top: 11px;
@@ -97,19 +97,19 @@
   }
 
   &__item {
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.714rem;
-    color: $dark-75;
-    list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: $dark-75;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.714rem;
+    list-style-type: none;
 
     &-calculating {
       width: 80%;
       max-width: 240px;
-      margin: 0px;
+      margin: 0;
 
       &_size {
         &_small {
@@ -119,61 +119,61 @@
 
       &_type {
         &_with-icon {
-          padding-right: 20px;
           position: relative;
-          
+          padding-right: 20px;
+
           &::before {
-            content: 'i';
-            width: 20px;
-            height: 20px;
             position: absolute;
-            right: 1px;
             top: 1px;
-            font-weight: bold;
-            font-size: 0.857rem;
-            line-height: 1.071rem;
-            text-transform: lowercase;
-            color: $dark-25;
-            border: 1px solid $dark-25;
-            border-radius: 50%;
+            right: 1px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: $dark-25;
+            font-weight: bold;
+            font-size: 0.857rem;
+            line-height: 1.071rem;
+            text-transform: lowercase;
+            border: 1px solid $dark-25;
+            border-radius: 50%;
+            content: 'i';
           }
         }
       }
     }
 
     &-total {
+      width: 20%;
+      margin: 0;
+      margin-left: 10px;
       white-space: nowrap;
       text-align: right;
-      width: 20%;
-      margin: 0px;
-      margin-left: 10px;
     }
   }
 
   &__total {
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 22px;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 22px;
 
     &-text {
+      color: $dark-100;
       font-weight: bold;
       font-size: 1.357rem;
       line-height: 1.643rem;
-      color: $dark-100;
       white-space: nowrap;
     }
 
     &-line {
-      width: 100%;
       position: relative;
       bottom: 4px;
+      width: 100%;
       border-bottom: 1px dashed $dark-25;
     }
   }
@@ -186,17 +186,17 @@
 
 @media (max-width: $xxs) {
   .calc-card {
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
 
     &__wrapper {
-      margin-right: 0px;
+      margin-right: 0;
     }
 
     &__item-calculating {
-      line-height: 1.286rem;
       max-width: 210px;
       padding-right: 30px;
+      line-height: 1.286rem;
       &::before {
         top: 7px;
       }

@@ -1,14 +1,14 @@
 .toggle {
   &__label {
     position: relative;
-    cursor: pointer;
-    font-family: $sans-serif-font;
-    font-style: normal;
+    padding-left: 50px;
+    color: $dark-75;
     font-weight: normal;
     font-size: 1rem;
+    font-family: $sans-serif-font;
+    font-style: normal;
     line-height: 1.714rem;
-    color: $dark-75;
-    padding-left: 50px;
+    cursor: pointer;
   }
 
   &__input {
@@ -16,27 +16,27 @@
   }
 
   &__control {
-    padding: 9px 19px;
-    display: inline-block;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 9px 19px;
     background: #fff;
     border: 1px solid $dark-25;
     border-radius: 10px;
     transition: 0.3s;
 
     &::before {
-      content: '';
       position: absolute;
-      left: 4px;
       top: 3px;
       bottom: 2px;
-      background: $dark-25;
+      left: 4px;
       width: 12px;
       height: 12px;
+      background: $dark-25;
       border-radius: 50%;
       transition: 0.3s;
+      content: '';
     }
   }
 }
@@ -46,6 +46,6 @@
 }
 
 .toggle__input:checked + .toggle__control::before {
-  transform: translateX(18px);
   background: $primary-gradient;
+  transform: translateX(18px);
 }

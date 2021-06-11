@@ -40,6 +40,8 @@ https://github.com/Vendalma/fsd_2step.git
 
 Команда `npm run lint` запускает проверку кода с помощью ESlint
 
+Команда `npm run stylelint` запускает проверку стилей с помощью stylelint
+
 ## jQuery плагины
 
 [air-datepicker](https://github.com/t1m0n/air-datepicker)

@@ -5,13 +5,13 @@
 }
 
 html {
+  color: $dark-75;
   font-size: 14px;
   font-family: 'Montserrat', 'Arial', sans-serif;
-  color: $dark-75;
 }
 
 body {
-  max-width: 1920px;
   min-width: 320px;
-  margin: 0px;
+  max-width: 1920px;
+  margin: 0;
 }

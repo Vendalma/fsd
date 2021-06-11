@@ -1,12 +1,12 @@
 @import '@components/like-button/like-button';
 
 .comment {
-  font-family: $sans-serif-font;
-  font-style: normal;
+  color: $dark-75;
   font-weight: normal;
   font-size: 1rem;
+  font-family: $sans-serif-font;
+  font-style: normal;
   line-height: 1.714rem;
-  color: $dark-75;
 
   &__block-user {
     display: flex;
@@ -14,22 +14,22 @@
   }
 
   &__user-photo {
-    margin-right: 12px;
     max-width: 46px;
     max-height: 46px;
+    margin-right: 12px;
   }
 
   &__photo {
     width: 100%;
     border: 2px solid #fff;
-    box-shadow: 0px 10px 20px $dark-10;
     border-radius: 50%;
+    box-shadow: 0 10px 20px $dark-10;
   }
 
   &__user-info {
-    margin: 0px;
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
   &__user-name {
@@ -43,13 +43,13 @@
   }
 
   &__like-button {
+    padding-top: 13px;
     padding-right: 4px;
-    padding-top: 6px;
   }
 
   &__text {
-    margin-top: 12px;
-    margin-bottom: 0px;
     max-width: 655px;
+    margin-top: 12px;
+    margin-bottom: 0;
   }
 }

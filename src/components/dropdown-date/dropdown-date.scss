@@ -11,54 +11,54 @@
   }
 
   &__label {
-    cursor: pointer;
-    width: 100%;
-    font-family: $sans-serif-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.857rem;
-    line-height: 1.071rem;
-    text-transform: uppercase;
-    color: $dark-100;
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    color: $dark-100;
+    font-weight: bold;
+    font-size: 0.857rem;
+    font-family: $sans-serif-font;
+    font-style: normal;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    cursor: pointer;
 
     &::before {
-      content: 'expand_more';
-      width: 42px;
-      height: 42px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      font-family: $material-icon-font;
+      width: 42px;
+      height: 42px;
+      color: $dark-50;
       font-weight: normal;
-      font-style: normal;
       font-size: 1.714rem;
+      font-family: $material-icon-font;
+      font-style: normal;
       line-height: 1.714rem;
       text-transform: none;
-      color: $dark-50;
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
+      content: 'expand_more';
     }
   }
 
   &__input {
     width: 100%;
-    font-family: $sans-serif-font;
+    margin-top: 5px;
+    padding: 9.2px 44px 9.2px 15px;
+    color: $dark-75;
     font-weight: normal;
     font-size: 1rem;
+    font-family: $sans-serif-font;
     line-height: 1.714rem;
-    color: $dark-75;
-    padding: 9.2px 44px 9.2px 15px;
-    outline: none;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid $dark-25;
     border-radius: 4px;
+    outline: none;
     cursor: pointer;
-    margin-top: 5px;
 
     &_size {
       &_small {
@@ -80,8 +80,8 @@
     }
 
     &:focus {
-      border: 1px solid $dark-50;
       color: $dark-75;
+      border: 1px solid $dark-50;
       outline: none;
 
       &::placeholder {
@@ -93,41 +93,41 @@
 
 .datepicker--cell {
   height: 100%;
+  max-height: 40px;
+  padding: 4.5% 0;
+  color: $dark-50;
+  font-weight: normal;
   font-size: 0.857rem;
   line-height: 1.071rem;
   text-transform: uppercase;
-  font-weight: normal;
-  color: $dark-50;
-  padding: 4.5% 0px;
-  max-height: 40px;
 }
 
 .datepicker--cell.-focus- {
-  color: #ffffff;
-  background: #4eb5e6;
+  color: #fff;
   font-weight: bold;
+  background: #4eb5e6;
   border-radius: 50%;
 }
 
 .datepicker--cell.-in-range- {
+  color: $dark-50;
   background-color: rgba(188, 156, 255, 0.2);
   border-radius: 0;
-  color: $dark-50;
 }
 
 .datepicker--cell.-in-range-.-focus- {
+  color: #fff;
   background-color: rgba(188, 156, 255, 0.5);
   border-radius: 50%;
-  color: #ffffff;
 
   &::after {
-    content: '';
+    position: absolute;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
     background-color: rgba(188, 156, 255, 0.2);
-    position: absolute;
-    z-index: -1;
+    content: '';
   }
 }
 
@@ -141,59 +141,59 @@
 }
 
 .datepicker--cell.-other-month-.-focus- {
-  color: #ffffff;
+  color: #fff;
   background: $dark-25;
 }
 
 .datepicker--cell.-range-from- {
-  background: $primary-gradient;
-  border-radius: 22px;
-  font-weight: bold;
-  color: #fff;
   position: relative;
+  color: #fff;
+  font-weight: bold;
+  background: $primary-gradient;
   border: none;
+  border-radius: 22px;
 
   &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    color: rgb(175, 159, 159);
-    height: 100%;
-    background-color: rgba(188, 156, 255, 0.2);
     position: absolute;
     right: 0;
-    border-radius: 22px 0px 0px 22px;
     z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(175, 159, 159);
+    background-color: rgba(188, 156, 255, 0.2);
+    border-radius: 22px 0 0 22px;
+    content: '';
   }
 }
 
 .datepicker--cell.-range-to- {
-  background: $primary-gradient;
-  border-radius: 50%;
-  font-weight: bold;
   position: relative;
   color: #fff;
+  font-weight: bold;
+  background: $primary-gradient;
   border: none;
+  border-radius: 50%;
 
   &::after {
-    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(188, 156, 255, 0.2);
-    position: absolute;
-    left: 0;
-    border-radius: 0px 22px 22px 0px;
     color: #fff;
-    z-index: -1;
+    background-color: rgba(188, 156, 255, 0.2);
+    border-radius: 0 22px 22px 0;
+    content: '';
   }
 }
 
 .datepicker--cell.-current- {
+  color: #fff;
+  font-weight: bold;
   background: $secondary-gradient;
   border-radius: 22px;
-  font-weight: bold;
-  color: #fff;
 }
 
 .datepicker--cell.-current-.-in-range- {
@@ -201,13 +201,13 @@
   background: $secondary-gradient;
 
   &::after {
-    content: '';
+    position: absolute;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
-    position: absolute;
     background-color: rgba(188, 156, 255, 0.2);
-    z-index: -1;
+    content: '';
   }
 }
 
@@ -216,12 +216,12 @@
   background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
 
   &::after {
-    content: '';
+    position: absolute;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: -1;
+    content: '';
   }
 }
 
@@ -231,9 +231,9 @@
 
 .datepicker--cell.-selected- {
   color: #fff;
-  border: none;
-  background: $primary-gradient;
   font-weight: bold;
+  background: $primary-gradient;
+  border: none;
   border-radius: 50%;
 }
 
@@ -251,11 +251,11 @@
 }
 
 .datepicker--day-name {
+  color: $color-one;
   font-weight: bold;
   font-size: 0.857rem;
   line-height: 1.071rem;
   text-transform: none;
-  color: $color-one;
 }
 
 .datepicker--cell-month.-focus- {
@@ -269,43 +269,43 @@
 .datepicker--cell.-disabled- {
   color: $dark-10;
   &::after {
-    content: '';
     display: none;
+    content: '';
   }
 }
 
 .datepicker--cell.-disabled-.-focus- {
-  background: #ffffff;
   color: $dark-10;
   font-weight: 400;
+  background: #fff;
   &::after {
-    content: '';
     display: none;
+    content: '';
   }
 }
 
 .datepicker--cell.-disabled-.-in-range- {
-  background: #ffffff;
   color: $dark-10;
+  background: #fff;
 }
 
 .datepicker--cell.-disabled-.-range-from- {
-  background: #ffffff;
-  border: none;
   color: $dark-10;
   font-weight: 400;
+  background: #fff;
+  border: none;
 }
 
 .datepicker--cell.-disabled-.-other-month-.-focus- {
-  background: #ffffff;
   color: $dark-10;
   font-weight: 400;
+  background: #fff;
   border: none;
 }
 
 .datepicker--cell.-disabled-.-range-from-.-focus- {
-  background: #ffffff;
   color: $dark-10;
+  background: #fff;
   border: none;
 }
 
@@ -315,20 +315,20 @@
 }
 
 .datepicker {
-  font-family: $sans-serif-font;
-  font-style: normal;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid $dark-25;
-  box-shadow: 0 10px 20px $dark-05;
-  border-radius: 4px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
   padding-top: 17px;
-  padding-left: 19px * 100% / 320px;
   padding-right: 20px * 100% / 320px;
   padding-bottom: 11px;
+  padding-left: 19px * 100% / 320px;
+  font-family: $sans-serif-font;
+  font-style: normal;
+  background: #fff;
+  border: 1px solid $dark-25;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px $dark-05;
 }
 
 .datepicker-inline .datepicker {
@@ -336,9 +336,9 @@
 }
 
 .datepicker--content {
-  width: 100%;
   box-sizing: border-box;
-  padding: 0px;
+  width: 100%;
+  padding: 0;
   padding-top: 10px;
   padding-bottom: 13px;
 }
@@ -348,8 +348,8 @@
 }
 
 .datepicker--nav {
+  padding: 0;
   border: none;
-  padding: 0px;
 }
 
 .datepicker--nav-action {
@@ -358,60 +358,60 @@
 
   &:hover {
     background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-    background-clip: border-box;
     -webkit-background-clip: text;
+    background-clip: border-box;
     -webkit-text-fill-color: transparent;
   }
 }
 
 .material--icon {
-  font-family: $material-icon-font;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: none;
-  font-size: 1.714rem;
-  line-height: 1.714rem;
   color: $color-one;
+  font-weight: normal;
+  font-size: 1.714rem;
+  font-family: $material-icon-font;
+  font-style: normal;
+  line-height: 1.714rem;
+  text-transform: none;
 }
 
 .datepicker--nav-title {
-  font-weight: bold;
-  line-height: 1.786rem;
-  font-size: 1.357rem;
-  color: $dark-100;
+  max-width: 100px;
   padding-right: 8px;
   padding-left: 10px;
-  max-width: 100px;
+  color: $dark-100;
+  font-weight: bold;
+  font-size: 1.357rem;
+  line-height: 1.786rem;
   text-align: center;
 
   &:hover {
-    opacity: 0.7;
     background: none;
+    opacity: 0.7;
   }
 }
 
 .datepicker--buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0;
   border: none;
-  padding: 0px;
 }
 
 .datepicker--button {
+  display: inline-flex;
+  flex: 0;
+  color: $color-one;
   font-weight: bold;
   font-size: 0.857rem;
   line-height: 1.071rem;
   text-transform: uppercase;
-  display: inline-flex;
-  flex: 0;
-  color: $color-one;
 
   &:focus,
   &:hover {
-    opacity: 0.5;
     background: none;
+    opacity: 0.5;
   }
 }
 
@@ -421,7 +421,7 @@
       flex-wrap: wrap;
 
       & > :first-child {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 10px;
       }
     }
@@ -437,6 +437,6 @@
   }
 
   .datepicker--cell {
-    padding: 3.9% 0px;
+    padding: 3.9% 0;
   }
 }

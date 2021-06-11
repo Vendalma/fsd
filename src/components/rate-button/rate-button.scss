@@ -1,10 +1,10 @@
 .rate-button {
   &__item {
     display: inline-block;
-    font-family: $material-icon-font;
     font-weight: normal;
-    font-style: normal;
     font-size: 1.714rem;
+    font-family: $material-icon-font;
+    font-style: normal;
     line-height: 1.429rem;
     background: $primary-gradient;
     background-clip: text;

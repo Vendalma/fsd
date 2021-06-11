@@ -10,13 +10,13 @@
   background: #f4f4f6;
 
   &__content-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 72px 20px 100px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
     & > :nth-child(1) {
       margin-right: 40px;
@@ -47,15 +47,15 @@
 @media (max-width: $xs) {
   .cards {
     &__content-block {
-      padding-left: 10px;
       padding-right: 10px;
+      padding-left: 10px;
 
       & > :nth-child(1) {
-        margin-right: 0px;
+        margin-right: 0;
       }
-      
+
       & > :nth-child(2) {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
   }

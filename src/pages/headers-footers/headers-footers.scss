@@ -4,15 +4,15 @@
 @import '@components/simple-footer/simple-footer';
 
 .headers-footers {
-  background: #f4f4f6;
   width: 100%;
+  background: #f4f4f6;
 
   &__content-block {
     margin: 0 auto;
     padding-top: 62px;
     padding-bottom: 140px;
   }
-  
+
   &__content {
     margin-bottom: 40px;
   }

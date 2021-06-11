@@ -1,10 +1,10 @@
 .text-types {
-  max-width: 436px;
   display: flex;
   flex-direction: row;
+  max-width: 436px;
+  font-weight: normal;
   font-family: $sans-serif-font;
   font-style: normal;
-  font-weight: normal;
 
   &__headers-wrapper {
     margin-right: 29px;
@@ -16,24 +16,24 @@
 
     &_type {
       &_h1 {
+        margin-bottom: 81px;
         font-size: 1.714rem;
         line-height: 2.071rem;
         text-transform: uppercase;
-        margin-bottom: 81px;
       }
 
       &_h2 {
+        margin-bottom: 76px;
         font-size: 1.357rem;
         line-height: 1.643rem;
         text-transform: uppercase;
-        margin-bottom: 76px;
       }
 
       &_h3 {
+        margin-bottom: 48px;
         font-size: 0.857rem;
         line-height: 1.071rem;
         text-transform: uppercase;
-        margin-bottom: 48px;
       }
 
       &_body {
@@ -46,35 +46,35 @@
   &__text {
     &_type {
       &_h1 {
+        margin-bottom: 53px;
+        color: $dark-100;
         font-weight: bold;
         font-size: 1.714rem;
         line-height: 2.071rem;
-        color: $dark-100;
-        margin-bottom: 53px;
       }
 
       &_h2 {
+        margin-bottom: 52px;
+        color: $dark-100;
         font-weight: bold;
         font-size: 1.357rem;
         line-height: 1.643rem;
-        color: $dark-100;
-        margin-bottom: 52px;
       }
 
       &_h3 {
+        margin-bottom: 47px;
+        color: $dark-100;
         font-weight: bold;
         font-size: 0.857rem;
         line-height: 1.071rem;
         text-transform: uppercase;
-        color: $dark-100;
-        margin-bottom: 47px;
       }
 
       &_body {
+        max-width: 301px;
+        color: $dark-75;
         font-size: 1rem;
         line-height: 1.714rem;
-        color: $dark-75;
-        max-width: 301px;
       }
     }
   }

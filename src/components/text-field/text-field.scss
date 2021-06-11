@@ -8,25 +8,25 @@
   }
 
   &__label {
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
 
   &__input {
     width: 100%;
-    border-radius: 4px;
-    background-color: #ffffff;
     width: inherit;
-    font-family: $sans-serif-font;
-    font-style: normal;
+    padding: 12.2px 15px;
+    color: $dark-25;
     font-weight: normal;
     font-size: 1rem;
-    padding: 12.2px 15px;
-    border: 1px solid $dark-25;
+    font-family: $sans-serif-font;
+    font-style: normal;
     line-height: 1.286rem;
-    color: $dark-25;
+    background-color: #fff;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
 
     &_theme {
       &_subscribe {
@@ -51,8 +51,8 @@
     }
 
     &:focus {
-      border: 1px solid $dark-50;
       color: $dark-75;
+      border: 1px solid $dark-50;
       outline: none;
 
       &::placeholder {
@@ -62,27 +62,26 @@
   }
 
   &__button {
-    cursor: pointer;
-    padding: 10px 9px 10px 10px;
-    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-family: $material-icon-font;
+    padding: 10px 9px 10px 10px;
     font-weight: normal;
-    font-style: normal;
-    text-transform: none;
     font-size: 1.714rem;
+    font-family: $material-icon-font;
+    font-style: normal;
     line-height: 1.714rem;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    text-transform: none;
     background: $primary-gradient;
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
     border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
 
     &:hover {
       opacity: 0.7;
@@ -90,8 +89,8 @@
 
     &:focus {
       background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-      background-clip: border-box;
       -webkit-background-clip: text;
+      background-clip: border-box;
       -webkit-text-fill-color: transparent;
     }
   }

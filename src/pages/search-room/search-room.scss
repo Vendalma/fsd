@@ -11,21 +11,21 @@
 @import '@components/simple-footer/simple-footer';
 
 .search-room {
-  background-color: #ffffff;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
 
   &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px 72px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     font-family: $sans-serif-font;
     font-style: normal;
   }
@@ -57,12 +57,12 @@
   }
 
   &__text {
-    font-size: 0.857rem;
-    line-height: 1rem;
+    margin: 0;
     color: $dark-50;
     font-weight: normal;
+    font-size: 0.857rem;
+    line-height: 1rem;
     text-align: center;
-    margin: 0px;
   }
 
   &__checkboxes {
@@ -82,7 +82,7 @@
     margin-bottom: 31px;
 
     & > :first-child {
-      margin-bottom: 17px;
+      margin-bottom: 16px;
     }
 
     & > :nth-child(2) {
@@ -99,35 +99,35 @@
   }
 
   &__rooms {
-    width: 100%;
-    max-width: 835px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 835px;
   }
 
   &__title {
+    margin-top: 0;
+    margin-bottom: 21px;
+    color: $dark-100;
     font-weight: bold;
     font-size: 1.714rem;
     line-height: 2.071rem;
-    color: $dark-100;
-    margin-top: 0px;
-    margin-bottom: 21px;
   }
 
   &__card-list {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px;
-    margin-top: 0px;
+    width: 100%;
+    margin-top: 0;
     margin-bottom: 19px;
+    padding: 0;
   }
 
   &__card-item {
-    list-style-type: none;
     margin-bottom: 21px;
+    list-style-type: none;
   }
 
   &__pagination {
@@ -136,8 +136,8 @@
   }
 
   &__line {
-    border-top: 1px solid $dark-25;
     width: 100%;
+    border-top: 1px solid $dark-25;
   }
 
   &__footer {
@@ -156,8 +156,8 @@
 @media (max-width: $lg) {
   .search-room {
     &__rooms {
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     &__card-item {

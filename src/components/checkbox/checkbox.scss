@@ -1,21 +1,21 @@
 .checkbox {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  position: relative;
 
   &__label {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    cursor: pointer;
-    font-family: $sans-serif-font;
-    font-style: normal;
+    padding-left: 30px;
+    color: $dark-50;
     font-weight: normal;
     font-size: 1rem;
+    font-family: $sans-serif-font;
+    font-style: normal;
     line-height: 1.286rem;
-    color: $dark-50;
-    padding-left: 30px;
+    cursor: pointer;
 
     &_type {
       &_rich {
@@ -30,53 +30,54 @@
 
   &__mark {
     &::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-color: #ffffff;
-      border: 1px solid $dark-25;
-      border-radius: 4px;
       position: absolute;
       top: 0;
       left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border: 1px solid $dark-25;
+      border-radius: 4px;
+      content: '';
     }
+
     /* checkbox mark by https://codepen.io/fanmanutd/pen/NWqNoKp */
     &::after {
-      content: '';
       position: absolute;
       top: 4px;
       left: 7.3px;
       width: 6px;
       height: 8px;
-      border-width: 0 2px 2px 0;
-      border-image: $primary-gradient;
       border-color: transparent;
-      border-image-slice: 1;
       border-style: solid;
+      border-width: 0 2px 2px 0;
       border-radius: 0;
+      border-image: $primary-gradient;
+      border-image-slice: 1;
       transform: rotate(45deg);
       opacity: 0;
+      content: '';
     }
   }
 
   &__header {
-    color: $dark-75;
-    line-height: 1.286rem;
-    font-weight: bold;
-    margin-bottom: 5px;
     margin-top: 2px;
+    margin-bottom: 5px;
+    color: $dark-75;
+    font-weight: bold;
+    line-height: 1.286rem;
   }
 
   &__text {
-    line-height: 1.286rem;
     color: $dark-50;
+    line-height: 1.286rem;
     white-space: pre-wrap;
 
     &_type {
       &_rich {
-        line-height: 1rem;
         font-size: 0.857rem;
+        line-height: 1rem;
       }
     }
 

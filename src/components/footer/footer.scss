@@ -4,24 +4,24 @@
 @import '@components/text-field/text-field';
 
 .footer {
-  width: 100%;
   position: relative;
-  background-color: #ffffff;
+  width: 100%;
   font-family: $sans-serif-font;
   font-style: normal;
+  background-color: #fff;
 
   &__container {
-    box-shadow: 0px 1px 0px $dark-10;
-    max-width: 1200px;
-    padding: 100px 20px 81px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 81px;
+    box-shadow: 0 1px 0 $dark-10;
 
     &-copyright {
-      box-shadow: 0px 10px 20px $dark-05;
       border-top: 1px solid #e5e5e5;
+      box-shadow: 0 10px 20px $dark-05;
     }
   }
 
@@ -39,10 +39,10 @@
     }
 
     &-subscription {
-      font-size: 1.714rem;
-      line-height: 1.714rem;
       max-width: 260px;
       padding-top: 5px;
+      font-size: 1.714rem;
+      line-height: 1.714rem;
 
       & > :first-child {
         margin-bottom: 18px;
@@ -54,12 +54,12 @@
     }
 
     &-copyright {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 23px 20px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 23px 20px;
     }
   }
 
@@ -68,54 +68,54 @@
   }
 
   &__text {
+    display: flex;
+    margin: 0;
+    color: $dark-75;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.714rem;
-    color: $dark-75;
     cursor: default;
-    display: flex;
-    margin: 0px;
   }
 
   &__link {
     &-list {
-      width: 100%;
       display: flex;
       flex-direction: column;
-      padding: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
+      width: 100%;
+      margin-top: 0;
       margin-right: 30px;
+      margin-bottom: 0;
+      padding: 0;
     }
 
     &-title {
-      list-style-type: none;
+      margin-bottom: 21px;
+      color: $dark-100;
       font-weight: bold;
       font-size: 0.857rem;
       line-height: 1.071rem;
       text-transform: uppercase;
-      color: $dark-100;
-      margin-bottom: 21px;
+      list-style-type: none;
     }
 
     &-item {
-      list-style-type: none;
       margin-bottom: 20px;
+      color: $dark-50;
       font-weight: normal;
       font-size: 1rem;
       line-height: 1.3rem;
-      color: $dark-50;
+      list-style-type: none;
     }
   }
 
   &__header {
+    margin-top: 0;
+    margin-bottom: 21px;
+    color: $dark-100;
     font-weight: bold;
     font-size: 0.857rem;
     line-height: 1.071rem;
     text-transform: uppercase;
-    color: $dark-100;
-    margin-top: 0px;
-    margin-bottom: 21px;
   }
 }
 

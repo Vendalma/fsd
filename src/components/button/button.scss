@@ -1,18 +1,18 @@
 .button {
   width: 100%;
-  outline: none;
-  font-family: $sans-serif-font;
-  font-style: normal;
+  padding: 0;
+  color: $color-one;
   font-weight: bold;
   font-size: 0.857rem;
+  font-family: $sans-serif-font;
+  font-style: normal;
   line-height: 1.071rem;
   text-transform: uppercase;
-  cursor: pointer;
+  background-color: #fff;
   border: none;
-  padding: 0px;
-  background-color: #ffffff;
-  color: $color-one;
   border-radius: 22px;
+  outline: none;
+  cursor: pointer;
 
   &:focus {
     text-shadow: 1px 1px 5px $dark-25;
@@ -23,14 +23,14 @@
   }
   &_theme {
     &_filled {
-      border: solid 2px transparent;
-      background-origin: border-box;
-      background: $primary-gradient;
-      color: #ffffff;
       display: flex;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: $primary-gradient;
+      background-origin: border-box;
+      border: solid 2px transparent;
 
       &:focus {
         text-shadow: none;
@@ -40,13 +40,13 @@
     &_bordered {
       display: flex;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
-      border: solid 2px transparent;
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
-      background-image: linear-gradient(#ffffff, #ffffff), $primary-gradient;
+      justify-content: center;
       color: $color-one;
+      background-image: linear-gradient(#fff, #fff), $primary-gradient;
+      background-clip: padding-box, border-box;
+      background-origin: border-box;
+      border: solid 2px transparent;
 
       &:focus {
         text-shadow: none;
@@ -70,17 +70,17 @@
       position: relative;
 
       &::before {
-        content: 'arrow_forward';
-        font-family: $material-icon-font;
-        font-weight: normal;
-        font-style: normal;
-        text-transform: none;
-        color: #ffffff;
-        font-size: 1.714rem;
-        line-height: 1.714rem;
         position: absolute;
         top: 8px;
         right: 8px;
+        color: #fff;
+        font-weight: normal;
+        font-size: 1.714rem;
+        font-family: $material-icon-font;
+        font-style: normal;
+        line-height: 1.714rem;
+        text-transform: none;
+        content: 'arrow_forward';
       }
     }
   }
@@ -98,8 +98,8 @@
   }
 
   &:disabled {
-    opacity: 0.5;
     cursor: default;
+    opacity: 0.5;
 
     &:focus {
       box-shadow: none;

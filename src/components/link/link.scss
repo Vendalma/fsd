@@ -1,27 +1,27 @@
 .link {
-  text-decoration: none;
-  font-family: $sans-serif-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-  color: $dark-50;
-  line-height: 1.214rem;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  color: $dark-50;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: $sans-serif-font;
+  font-style: normal;
+  line-height: 1.214rem;
+  text-decoration: none;
 
   &_active {
-    font-weight: bold;
     color: $dark-75;
+    font-weight: bold;
   }
 
   &__icon {
-    font-family: $material-icon-font;
-    font-weight: normal;
-    font-style: normal;
-    text-transform: none;
     color: $dark-50;
+    font-weight: normal;
     font-size: 1.714rem;
+    font-family: $material-icon-font;
+    font-style: normal;
     line-height: 1.429rem;
+    text-transform: none;
   }
 }

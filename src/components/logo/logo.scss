@@ -1,11 +1,11 @@
 .logo {
   &__gray-image {
-    padding-top: 30px * 100%/ 1410px;
-    padding-left: 30px * 100%/ 1410px;
     display: flex;
     flex-direction: row;
     align-items: center;
     width: max-content;
+    padding-top: 30px * 100%/ 1410px;
+    padding-left: 30px * 100%/ 1410px;
   }
 
   &__link {

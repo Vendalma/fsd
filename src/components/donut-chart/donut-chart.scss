@@ -3,12 +3,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-end;
-  font-family: $sans-serif-font;
-  font-style: normal;
+  color: $dark-75;
   font-weight: normal;
   font-size: 1rem;
+  font-family: $sans-serif-font;
+  font-style: normal;
   line-height: 1.714rem;
-  color: $dark-75;
 
   &__wrapper {
     position: relative;
@@ -16,16 +16,16 @@
   }
 
   &__diagram-label {
-    opacity: 1;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 4px;
+    color: #fff;
+    font-size: 0.929rem;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
-    position: absolute;
-    padding: 4px;
-    margin: 0px;
-    z-index: 10;
+    opacity: 1;
     pointer-events: none;
-    font-size: 0.929rem;
-    color: #ffffff;
 
     &_hidden {
       opacity: 0;
@@ -33,34 +33,34 @@
   }
 
   &__info {
+    position: absolute;
+    top: 29%;
     display: inline-flex;
     flex-direction: column;
-    position: absolute;
+    margin: 0;
     text-align: center;
-    top: 29%;
-    margin: 0px;
   }
 
   &__count {
+    margin-bottom: 2px;
+    color: $color-one;
     font-weight: bold;
     font-size: 1.714rem;
     line-height: 2.071rem;
-    color: $color-one;
-    margin-bottom: 2px;
   }
 
   &__text {
+    color: $color-one;
     font-weight: bold;
     font-size: 0.857rem;
     line-height: 1.071rem;
     text-transform: uppercase;
-    color: $color-one;
   }
 
   &__legend {
-    margin: 0px;
-    padding-left: 29px;
+    margin: 0;
     padding-bottom: 10px;
+    padding-left: 29px;
   }
 
   &__item {
@@ -69,49 +69,49 @@
     &_type {
       &_excellent {
         &::before {
-          content: '';
+          display: inline-block;
           width: 10px;
           height: 10px;
-          display: inline-block;
-          border-radius: 50%;
           margin-right: 5px;
           background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+          border-radius: 50%;
+          content: '';
         }
       }
 
       &_good {
         &::before {
-          content: '';
+          display: inline-block;
           width: 10px;
           height: 10px;
-          display: inline-block;
-          border-radius: 50%;
           margin-right: 5px;
           background: $secondary-gradient;
+          border-radius: 50%;
+          content: '';
         }
       }
 
       &_satisfactory {
         &::before {
-          content: '';
+          display: inline-block;
           width: 10px;
           height: 10px;
-          display: inline-block;
-          border-radius: 50%;
           margin-right: 5px;
           background: $primary-gradient;
+          border-radius: 50%;
+          content: '';
         }
       }
 
       &_disappointed {
         &::before {
-          content: '';
+          display: inline-block;
           width: 10px;
           height: 10px;
-          display: inline-block;
-          border-radius: 50%;
           margin-right: 5px;
           background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+          border-radius: 50%;
+          content: '';
         }
       }
     }
@@ -125,7 +125,7 @@
     justify-content: center;
 
     &__legend {
-      padding-bottom: 0px;
+      padding-bottom: 0;
     }
   }
 }

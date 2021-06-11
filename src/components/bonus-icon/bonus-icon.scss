@@ -1,22 +1,21 @@
 .bonus-icon {
-  width: 100%;
-  max-width: 280px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 280px;
 
   &__container {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
   }
-
   &__icon {
-    max-width: 48px;
     align-self: center;
-    font-family: $material-icon-font;
+    max-width: 48px;
     font-weight: normal;
-    font-style: normal;
     font-size: 3.429rem;
+    font-family: $material-icon-font;
+    font-style: normal;
     line-height: 2.929rem;
     background: $primary-gradient;
     background-clip: text;
@@ -24,21 +23,21 @@
   }
 
   &__block {
-    margin-right: 10px;
     display: flex;
+    margin-right: 10px;
   }
 
   &__text-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0px;
-    font-family: $sans-serif-font;
-    font-style: normal;
+    margin: 0;
+    color: $dark-75;
     font-weight: normal;
     font-size: 1rem;
+    font-family: $sans-serif-font;
+    font-style: normal;
     line-height: 1.714rem;
-    color: $dark-75;
   }
 
   &__header {
