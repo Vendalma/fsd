@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   max-width: 380px;
-  padding: 39px 21px 29px 30px;
+  padding: 40px 21px 29px 30px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -15,7 +15,6 @@
 
   &__wrapper {
     margin-right: 8px;
-    margin-bottom: 32px;
     font-family: $sans-serif-font;
     font-style: normal;
   }
@@ -75,7 +74,7 @@
   }
 
   &__dropdown-date {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   &__guests {
@@ -87,7 +86,7 @@
   }
 
   &__calculating-items {
-    margin: 0;
+    margin-bottom: 33px;
     padding: 0;
 
     & > :nth-of-type(2) {

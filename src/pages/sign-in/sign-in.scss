@@ -12,7 +12,7 @@
     width: 100%;
     background-image: url('~@/assets/images/bg-image-4.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     transform-origin: 50% 50%;
     animation: animation-frames linear 0.1s;
@@ -46,8 +46,8 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 163px;
-    padding-bottom: 162px;
+    padding-top: 172px;
+    padding-bottom: 173px;
   }
 
   &__card {

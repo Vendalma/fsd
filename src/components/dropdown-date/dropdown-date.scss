@@ -111,8 +111,18 @@
 
 .datepicker--cell.-in-range- {
   color: $dark-50;
-  background-color: rgba(188, 156, 255, 0.2);
+  background: none;
   border-radius: 0;
+  &::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $primary-gradient;
+    opacity: 0.25;
+    content: '';
+  }
 }
 
 .datepicker--cell.-in-range-.-focus- {
@@ -161,8 +171,9 @@
     width: 100%;
     height: 100%;
     color: rgb(175, 159, 159);
-    background-color: rgba(188, 156, 255, 0.2);
+    background: $primary-gradient;
     border-radius: 22px 0 0 22px;
+    opacity: 0.25;
     content: '';
   }
 }
@@ -183,8 +194,9 @@
     width: 100%;
     height: 100%;
     color: #fff;
-    background-color: rgba(188, 156, 255, 0.2);
+    background: $primary-gradient;
     border-radius: 0 22px 22px 0;
+    opacity: 0.25;
     content: '';
   }
 }
@@ -339,7 +351,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 13px;
 }
 
@@ -354,12 +366,12 @@
 
 .datepicker--nav-action {
   width: auto;
-  padding-bottom: 23px;
+  padding-bottom: 18px;
 
   &:hover {
     background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
     -webkit-background-clip: text;
-    background-clip: border-box;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -375,8 +387,8 @@
 }
 
 .datepicker--nav-title {
-  max-width: 100px;
   padding-right: 8px;
+  padding-bottom: 20px;
   padding-left: 10px;
   color: $dark-100;
   font-weight: bold;

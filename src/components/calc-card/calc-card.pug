@@ -64,9 +64,9 @@ mixin calc-card(options = {})
             p.calc-card__item-calculating.calc-card__item-calculating_type_with-icon.calc-card__item-calculating_size_small Сбор за дополнительные услуги
             p.calc-card__item-total #{formatNumber(additionalServiceFee)}
 
-      p.calc-card__total
-        span.calc-card__total-text Итого
-        span.calc-card__total-line
-        span.calc-card__total-text #{formatNumber((roomPrice*dayCount)-discount+additionalServiceFee)}
+        p.calc-card__total
+          span.calc-card__total-text Итого
+          span.calc-card__total-line
+          span.calc-card__total-text #{formatNumber((roomPrice*dayCount)-discount+additionalServiceFee)}
       .calc-card__button
         +button({theme:"filled", size:"m", text:"Забронировать", type: "submit"})
