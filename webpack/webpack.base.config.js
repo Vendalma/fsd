@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -33,6 +35,7 @@ const createEntryPoints = () => {
   return entryPoints;
 };
 module.exports = {
+  mode: isDev? 'development' : 'production',
   externals: {
     paths: PATHS,
   },
@@ -45,10 +48,9 @@ module.exports = {
   },
   context: PATHS.src,
   entry: createEntryPoints(),
-
   output: {
     path: PATHS.dist,
-    filename: `pages/[name]/[name].js`,
+    filename: `pages/[name]/[name].min.js`,
   },
   optimization: {
     splitChunks: {
@@ -102,14 +104,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
+              sourceMap: isDev,
               postcssOptions: {
                 config: `./postcss.config.js`,
               },
@@ -129,13 +128,13 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
+              sourceMap: isDev,
             },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
+              sourceMap: isDev,
               postcssOptions: {
                 config: `./postcss.config.js`,
               },
@@ -158,7 +157,7 @@ module.exports = {
                 `${PATHS.src}/assets/scss/variables.scss`,
                 `${PATHS.src}/assets/scss/font-face-mixin.scss`,
               ],
-              sourceMap: true,
+              sourceMap: isDev,
             },
           },
         ],
@@ -167,7 +166,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `pages/[name]/[name].css`,
+      filename: `pages/[name]/[name].min.css`,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
