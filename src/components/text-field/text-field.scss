@@ -89,8 +89,7 @@
 
     &:focus {
       background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-      -webkit-background-clip: text;
-      background-clip: border-box;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
